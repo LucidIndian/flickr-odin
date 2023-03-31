@@ -48,6 +48,10 @@ gem "bootsnap", require: false
 # Added by me
 gem "flickr"
 
+# Added by me - https://github.com/laserlemon/figaro
+# Figaro may use `File.exists?` which was removed in Ruby 3.2: https://bugs.ruby-lang.org/issues/17391
+# gem "figaro"
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
