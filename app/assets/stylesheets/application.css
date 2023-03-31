@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+  background-color:rgb(187, 164, 231)
+ }
+
+ section {
+  background-color: rgb(248, 246, 176)
+ }
+
+ #pic_result {
+  margin: 1.2rem;
+  padding: 1.2rem;
+  border: solid;
+  border-width: 3px;
+  width: fit-content;
+ }

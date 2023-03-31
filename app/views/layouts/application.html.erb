@@ -11,6 +11,13 @@
   </head>
 
   <body>
-    <%= yield %>
+    <main>
+      <% if flash[:alert] %>
+      <div style="color:red; background-color:yellow;">
+        <%= alert %>
+      </div>
+      <% end %>
+      <%= yield %>
+    </main>
   </body>
 </html>

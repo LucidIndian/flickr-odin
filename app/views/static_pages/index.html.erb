@@ -1,1 +1,23 @@
 <h1>Tygh's Flickr App</h1>
+
+<%# THE FORM! %>
+<%= form_with url: "/", method: :get do |form| %>
+  <%= form.label :flickr_user_id, "Flickr user ID:" %>
+  <%= form.text_field :flickr_user_id %>
+  <%= form.submit "Load" %>
+<% end %>
+
+<%# THE RESULT FROM FLICKR! %>
+
+<section id="pic_result">
+  <% if params[:flickr_user_id] %>
+    <div>Displaying photos from user <%= params[:flickr_user_id] %> </div>
+  <% else %>
+    <div>Displaying latest public photos uploaded to Flickr</div>
+  <% end %>
+   <div>
+      <% @photos.each do |photo| %>
+      <img src="<%= Flickr.url_t(photo) %>"/>
+      <% end %>
+    </div>
+</section>
