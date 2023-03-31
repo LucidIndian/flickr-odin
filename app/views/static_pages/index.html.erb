@@ -16,8 +16,12 @@
     <div>Displaying latest public photos uploaded to Flickr</div>
   <% end %>
    <div>
-      <% @photos.each do |photo| %>
-      <img src="<%= Flickr.url_t(photo) %>"/>
+      <% if @photos.count <= 0 %>
+        <p>User has not uploaded any public photos</p>
+      <% else %>
+        <% @photos.each do |photo| %>
+        <img src="<%= Flickr.url_t(photo) %>"/>
+        <% end %>
       <% end %>
     </div>
 </section>
